@@ -1,18 +1,28 @@
-<h1>新規記事投稿</h1>
+<div class="col-md-12">
 
-<%= form_for @post do |f| %>
+  <h1>新規記事投稿</h1>
 
-<p>タイトル<br>
-  <%= f.text_field :title %>
-</p>
+  <%= form_for @post do |f| %>
 
-<p>カテゴリ<br>
-  <%= f.text_field :category %>
-</p>
+  <div class="form-group">
+    <%= f.label "タイトル" %>
+    <%= f.text_field :title, class: "form-control" %>
+  </div>
 
-<p>本文<br>
-  <%= f.text_area :body %>
-</p>
 
-<%= f.submit '投稿する' %>
+
+  <div class="form-group">
+    <%= f.label "カテゴリ" %>
+    <%= f.text_field :category, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label "本文" %>
+    <%= f.text_area :body, class: "form-control" %>
+  </div>
+
+
+  <%= f.submit '登録する', class: "btn btn-primary" %>
 <% end %>
+
+</div>
