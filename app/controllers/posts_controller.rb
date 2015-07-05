@@ -43,7 +43,8 @@ class PostsController < ApplicationController
     params.require(:post).permit(
       :title,
       :body,
-      :category
+      :category,
+      :category_id
       )
   end
 
